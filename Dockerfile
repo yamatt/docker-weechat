@@ -21,8 +21,10 @@ RUN yum install -y \
     perl-devel \
     ruby-2.3 \
     ruby-devel \
+    rubygems \
     ncurses-devel \
     python-devel \
+    python-pip \
     perl-ExtUtils-Embed
 
 RUN git clone https://github.com/weechat/weechat.git
