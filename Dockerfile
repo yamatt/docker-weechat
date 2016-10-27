@@ -38,9 +38,6 @@ RUN cmake .. \
     -DCMAKE_INSTALL_PREFIX=${INSTALL_PATH} \
     -DWEECHAT_HOME=~ \
     && make && make install
-    
-WORKDIR /
-RUN rm /weechat
 
 # create low-level user
 RUN adduser weechat --home /home/weechat
