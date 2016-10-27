@@ -39,8 +39,8 @@ RUN cmake .. \
     -DWEECHAT_HOME=~ \
     && make && make install
     
-WORKDIR ../..
-RUN rm weechat
+WORKDIR /
+RUN rm /weechat
 
 # create low-level user
 RUN adduser weechat --home /home/weechat
