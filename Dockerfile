@@ -27,7 +27,11 @@ RUN yum install -y \
     python-devel \
     python-setuptools \
     perl-ExtUtils-Embed
+    
 
+ENV LC_ALL=en_US.utf8
+RUN localectl set-locale LANG=en_US.utf8
+    
 RUN git clone https://github.com/weechat/weechat.git
 WORKDIR weechat
 
