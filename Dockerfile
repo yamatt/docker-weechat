@@ -17,6 +17,7 @@ RUN yum install -y \
     gnutls-devel \
     aspell \
     aspell-devel \
+    aspell-en \
     ca-certificates \
     perl-devel \
     ruby-2.3 \
