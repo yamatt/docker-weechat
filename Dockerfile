@@ -47,7 +47,7 @@ RUN cmake .. \
     && make && make install
 
 # create low-level user
-RUN adduser weechat --home /home/weechat
+RUN adduser weechat --home /home/weechat --uid 2000
 USER weechat
 
 WORKDIR /home/weechat
