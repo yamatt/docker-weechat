@@ -29,8 +29,7 @@ RUN yum install -y \
     perl-ExtUtils-Embed
     
 
-ENV LC_ALL=en_US.utf8
-RUN localectl set-locale LANG=en_US.utf8
+ENV LC_ALL=C.utf8 LANG=C.utf8
     
 RUN git clone https://github.com/weechat/weechat.git
 WORKDIR weechat
