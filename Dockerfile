@@ -28,7 +28,7 @@ RUN yum install -y \
     perl-ExtUtils-Embed
     
 
-ENV LC_ALL=en_US.utf8 LANG=en_US.utf8 TERM=screen
+ENV LC_ALL=en_US.utf8 LANG=en_US.utf8 TERM=screen-256color
     
 RUN git clone https://github.com/weechat/weechat.git
 WORKDIR weechat
