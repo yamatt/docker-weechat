@@ -49,7 +49,7 @@ RUN adduser weechat --home /home/weechat --uid 2000
 
 COPY aspell.conf /home/weechat/.aspell.conf
 
-RUN chown weechat:weechat /home/weechat/.aspell
+RUN chown weechat:weechat /home/weechat/.aspell.conf
 
 USER weechat
 
