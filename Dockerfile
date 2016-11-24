@@ -17,7 +17,6 @@ RUN yum install -y \
     gnutls-devel \
     aspell \
     aspell-devel \
-    aspell-en \
     ca-certificates \
     perl-devel \
     ruby-2.3 \
@@ -47,9 +46,16 @@ RUN cmake .. \
 
 # create low-level user
 RUN adduser weechat --home /home/weechat --uid 2000
+
+COPY aspell.conf /home/weechat/.aspell.conf
+
+RUN chown weechat:weechat /home/weechat/.aspell
+
 USER weechat
 
 WORKDIR /home/weechat
+
+RUN mkdir aspell
 
 # Setup Weechat running dir
 VOLUME ["/home/weechat"]
